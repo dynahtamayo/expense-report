@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', 'AssetsController@index');
+Route::get('/assets/create', 'AssetsController@create'); 
+Route::get('/assets/{asset}', 'AssetsController@show');
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::post('/assets','AssetsController@store'); 
+
+Route::get('/assets/{asset}/edit','AssetsController@edit'); 
+
+Route::put('/assets/{asset}','AssetsController@update'); 
+
+Route::delete('/assets/{asset}','AssetsController@destroy'); 
