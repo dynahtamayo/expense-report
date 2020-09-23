@@ -13,7 +13,7 @@ class CreateExpenseItemTable extends Migration
      */
     public function up()
     {
-        Schema::create('expense_item', function (Blueprint $table) {
+        Schema::create('expense_items', function (Blueprint $table) {
             $table->id();
             $table->string('description');
             $table->date('date');
@@ -34,6 +34,6 @@ class CreateExpenseItemTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('expense_item');
+        Schema::dropIfExists('expense_items');
     }
 }
