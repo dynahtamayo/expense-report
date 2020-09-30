@@ -14,6 +14,7 @@
 	<h4>Last Name =  {{ $users->last_name }}</h4>
 	<h4>Phone = {{ $users->phone }}</h4>
 	<h4>Email =  {{ $users->email }}</h4>
+	<h4>Password = {{ $users->password }}</h4>
 	<h4>Department ID =  {{ $users->department_id }}</h4>
 	
 	<form action="/users/{{ $users->id }}" method="POST">

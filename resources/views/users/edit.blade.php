@@ -23,6 +23,9 @@
 			<input placeholder="Email" id="email" type="string" name="email" value='{{ $users->email }}'>
 			<label for="email"></label>
 			
+			<input placeholder="Password" id="email" type="password" name="password" value='{{ $users->password }}'>
+			<label for="password"></label>
+
 			<input placeholder="DepartmentID" id="department_id" type="number" name="department_id" value='{{ $users->department_id }}'>
 			<label for="department_id"></label>
 

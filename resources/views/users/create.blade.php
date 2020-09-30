@@ -24,6 +24,9 @@
 		<input placeholder="Email" id="email" type="string" name="email" >
 		<label for="email"></label>
 		<br><br>
+		<input placeholder="Password" id="password" type="password" name="password" >
+		<label for="password"></label>
+		<br><br>
 		<input placeholder="DepartmentID" id="department_id" type="number" name="department_id" >
 		<label for="department_id"></label>
 		<br><br>

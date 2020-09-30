@@ -27,6 +27,7 @@ class UsersController extends Controller
     	$users->last_name = request()->last_name;
     	$users->email = request()->email;
     	$users->phone = request()->phone;
+        $users->password = request()->password;
         $users->department_id = request()->department_id;
         $users->save();
     	//redirect
@@ -43,6 +44,7 @@ class UsersController extends Controller
     	$users->last_name = request()->last_name;
     	$users->email = request()->email;
     	$users->phone = request()->phone;
+        $users->password = request()->password;
         $users->department_id = request()->department_id;
         $users->save();
     	return redirect('/');

@@ -19,6 +19,7 @@
 					<th>Last Name</th>
 					<th>Phone</th>
 					<th>Email</th>
+					<th>Password</th>
 					<th>Department ID</th>
 				</tr>
 			</thead>
@@ -47,6 +48,11 @@
 					<td>
 						@foreach($users as $user)							
 							{{ $user->email }} <br>					
+						@endforeach
+					</td>
+					<td>
+						@foreach($users as $user)							
+							{{ $user->password }} <br>					
 						@endforeach
 					</td>
 					<td>
