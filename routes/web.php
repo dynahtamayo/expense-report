@@ -14,32 +14,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'CategoryController@index');
-
-Route::get('/category/create', 'CategoryController@create'); // FIRST 
+Route::get('/category/create', 'CategoryController@create');  
 Route::get('/category/{Categories}', 'CategoryController@show');
-
-Route::post('/category', 'CategoryController@store'); // SECOND
-
-Route::get('/category/{Categories}/edit', 'CategoryController@edit'); //THIRD
- 
-Route::put('/category/{Categories}', 'CategoryController@update'); // FOURTH
-
-Route::delete('/category/{Categories}', 'CategoryController@destroy'); // FIFT
+Route::post('/category', 'CategoryController@store'); 
+Route::get('/category/{Categories}/edit', 'CategoryController@edit');  
+Route::put('/category/{Categories}', 'CategoryController@update'); 
+Route::delete('/category/{Categories}', 'CategoryController@destroy'); 
 
 
-//display
-// GET /events/create = display the create form FIRST
-// GET /events/{event}/edit = display the update form THIRD
 
-//REST 
-//submit
-// POST /events = store a record SECOND
-
-//update
-// PUT /events/{event} = update a record FOURTH
-
-//delete
-// DELETE /events/{event} = delete a record FIFTH
 
 
 
