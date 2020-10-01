@@ -17,18 +17,15 @@ Route::put('/budget-items/{budget_item}', 'BudgetItemsController@update'); // FO
 
 Route::delete('/budget-items/{budget_item}', 'BudgetItemsController@destroy'); // FIFTH
 
+Route::get('/', 'CategoryController@index');
 
-//display
-// GET /events/create = display the create form FIRST
-// GET /events/{event}/edit = display the update form THIRD
+Route::get('/category/create', 'CategoryController@create'); // FIRST 
+Route::get('/category/{Categories}', 'CategoryController@show');
 
-//REST 
-//submit
-// POST /events = store a record SECOND
+Route::post('/category', 'CategoryController@store'); // SECOND
 
-//update
-// PUT /events/{event} = update a record FOURTH
+Route::get('/category/{Categories}/edit', 'CategoryController@edit'); //THIRD
+ 
+Route::put('/category/{Categories}', 'CategoryController@update'); // FOURTH
 
-//delete
-// DELETE /events/{event} = delete a record FIFTH 
-	
+Route::delete('/category/{Categories}', 'CategoryController@destroy'); // FIFT
