@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 use App\ExpenseItem;
 
@@ -26,16 +27,33 @@ class ExpenseItemsController extends Controller
     public function store()
     {
     	// Create new event
-    	$expense_item = new ExpenseItem;
-    	$expense_item->description = request()->description;
-    	$expense_item->date = request()->date;
-    	$expense_item->amount = request()->amount;
-    	$expense_item->approved_amount = request()->approved_amount;
-    	$expense_item->submit_user_id = request()->submit_user_id;
-    	$expense_item->expenses_id = request()->expenses_id;
-    	$expense_item->expenses_category_id = request()->expenses_category_id;
-    	$expense_item->asset_id = request()->asset_id;
-    	$expense_item->save();
+        $validated_fields = request()->validate([
+            'description' => 'required',
+            'date' => 'required',
+            'amount' => 'required',
+            'approved_amount' => 'required|unique:expense_items',
+            'submit_user_id' => 'required|unique:expense_items',
+            'expenses_id' => 'required|unique:expense_items',
+            'expenses_category_id' => 'required|unique:expense_items',
+            'asset_id' => 'required|unique:expense_items'
+
+            //'email' => 'required|unique:users',
+
+        ]);
+
+        $expense_item = ExpenseItem::create($validated_fields);
+
+
+    	// $expense_item = new ExpenseItem;
+    	// $expense_item->description = request()->description;
+    	// $expense_item->date = request()->date;
+    	// $expense_item->amount = request()->amount;
+    	// $expense_item->approved_amount = request()->approved_amount;
+    	// $expense_item->submit_user_id = request()->submit_user_id;
+    	// $expense_item->expenses_id = request()->expenses_id;
+    	// $expense_item->expenses_category_id = request()->expenses_category_id;
+    	// $expense_item->asset_id = request()->asset_id;
+    	// $expense_item->save();
 
 
     	// Redirect
@@ -49,18 +67,30 @@ class ExpenseItemsController extends Controller
 
     public function update(ExpenseItem $expense_item)
     {
+
+        $validated_fields = request()->validate([
+            'description' => 'required',
+            'date' => 'required',
+            'amount' => 'required',
+            'approved_amount' => 'required',
+            'submit_user_id' => 'required',
+            'expenses_id' => 'required',
+            'expenses_category_id' => 'required',
+            'asset_id' => 'required'           
+
+        ]);
+
+    $expense_item = ExpenseItem::create($validated_fields);
     	
-    	$expense_item->description = request()->description;
-    	$expense_item->date = request()->date;
-    	$expense_item->amount = request()->amount;
-    	$expense_item->approved_amount = request()->approved_amount;
-    	$expense_item->submit_user_id = request()->submit_user_id;
-    	$expense_item->expenses_id = request()->expenses_id;
-    	$expense_item->expenses_category_id = request()->expenses_category_id;
-    	$expense_item->asset_id = request()->asset_id;
-    	$expense_item->save();
-
-
+    	// $expense_item->description = request()->description;
+    	// $expense_item->date = request()->date;
+    	// $expense_item->amount = request()->amount;
+    	// $expense_item->approved_amount = request()->approved_amount;
+    	// $expense_item->submit_user_id = request()->submit_user_id;
+    	// $expense_item->expenses_id = request()->expenses_id;
+    	// $expense_item->expenses_category_id = request()->expenses_category_id;
+    	// $expense_item->asset_id = request()->asset_id;
+    	// $expense_item->save();
     	
     	return redirect('/expense-items/'.$expense_item->id);
     }	

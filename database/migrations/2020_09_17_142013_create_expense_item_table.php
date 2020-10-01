@@ -19,10 +19,10 @@ class CreateExpenseItemTable extends Migration
             $table->date('date');
             $table->decimal('amount', 10, 2);
             $table->decimal('approved_amount', 10, 2);
-            $table->integer('submit_user_id');
-            $table->integer('expenses_id');
-            $table->integer('expenses_category_id');
-            $table->integer('asset_id');
+            $table->integer('submit_user_id')->unique();
+            $table->integer('expenses_id')->unique();
+            $table->integer('expenses_category_id')->unique();
+            $table->integer('asset_id')->unique();
             $table->timestamps();
         });
     }
