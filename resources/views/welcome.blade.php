@@ -82,6 +82,7 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
+                    Expense Report
                 </div>
 
                 <div class="links">

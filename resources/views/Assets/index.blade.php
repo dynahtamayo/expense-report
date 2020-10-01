@@ -9,7 +9,7 @@
 </head>
 <body>
 	<h1>HOME</h1>
-
+	<h1>ASSET</h1>
 	<a href="/expenses/create">Create Asset</a> <br> <br>
 
 		<table border="1">

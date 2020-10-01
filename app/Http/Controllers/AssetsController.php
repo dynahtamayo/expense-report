@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Asset;
 use Illuminate\Http\Request;
 
@@ -30,6 +31,10 @@ class AssetsController extends Controller
 	    	$asset->description = request()->description;
 	    	$asset->save();
 
+	    	$validated_fields = request()->validate(['description' => 'required']);
+
+	    	$asset = Asset::create($validated_fields);
+
 	    	return redirect('/');
 	    }
 
@@ -43,6 +48,10 @@ class AssetsController extends Controller
 
 	    	$asset->description = request()->description;
 	    	$asset->save();
+
+	    	$validated_fields = request()->validate(['description' => 'required']);
+
+	    	$asset = Asset::create($validated_fields);
 
 	    	return redirect('/assets/'.$asset->id);
 	    }	

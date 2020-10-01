@@ -17,9 +17,8 @@ Route::get('/', 'AssetsController@index');
 Route::get('/assets/create', 'AssetsController@create'); 
 Route::get('/assets/{asset}', 'AssetsController@show');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
 
 Route::post('/assets','AssetsController@store'); 
 
