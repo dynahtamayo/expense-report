@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+
+use App\User;
 use App\Expense;
 use Illuminate\Http\Request;
 
 
 class ExpensesController extends Controller
 {
+
+
  	    public function index()
 	    {
 	    	$expenses = Expense::all();
@@ -26,14 +30,25 @@ class ExpensesController extends Controller
 
 	    public function store()
 	    {
-	    	$expense = new Expense;
+	     /* $expense = new Expense;
 	    	$expense->description = request()->description;
 	    	$expense->date_submitted = request()->date_submitted;
 	    	$expense->date_status = request()->date_status;
 	    	$expense->status = request()->status;
 	    	$expense->submit_user_id = request()->submit_user_id;
 	    	$expense->approval_user_id = request()->approval_user_id;
-	    	$expense->save();
+	    	$expense->save();  */
+
+	    	$validated_fields = request()->validate([
+	    		'description' => 'required',
+	    		'date_submitted' => 'required',
+	    		'date_status' => 'required',
+	    		'status' => 'required',
+	    		'submit_user_id' => 'required',
+	    		'approval_user_id' => 'required'
+	    	]);
+
+	    	$expense = Expense::create($validated_fields); 
 
 	    	return redirect('/');
 	    }
@@ -46,14 +61,24 @@ class ExpensesController extends Controller
 	    public function update(Expense $expense)
 	    {
 	    	
-	    	$expense->description = request()->description;
+	    	/* $expense->description = request()->description;
 	    	$expense->date_submitted = request()->date_submitted;
 	    	$expense->date_status = request()->date_status;
 	    	$expense->status = request()->status;
 	    	$expense->submit_user_id = request()->submit_user_id;
 	    	$expense->approval_user_id = request()->approval_user_id;
-	    	$expense->save();
+	    	$expense->save(); */
 	    	
+	    	$validated_fields = request()->validate([
+	    		'description' => 'required',
+	    		'date_submitted' => 'required',
+	    		'date_status' => 'required',
+	    		'status' => 'required',
+	    		'submit_user_id' => 'required',
+	    		'approval_user_id' => 'required'
+	    	]);
+
+	    	$expense = Expense::create($validated_fields); 
 	    	return redirect('/expenses/'.$expense->id);
 	    }	
 
@@ -62,5 +87,7 @@ class ExpensesController extends Controller
 	    	$expense->delete();
 	    	return redirect('/');
 	    }
+
+	    
 
 }

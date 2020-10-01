@@ -8,10 +8,9 @@
 
 </head>
 <body>
-	<h1>HOME</h1>
+	<h1>EXPENSE HOME</h1>
 
 	<a href="/expenses/create">Create Expense</a> <br> <br>
-
 		<table border="1">
 			
 				<tr>

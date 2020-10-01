@@ -4,11 +4,12 @@
 	<title></title>
 </head>
 <body>
-	<h1><a href="/">HOME</a></h1>
+	<h1><a href="/">EXPENSE</a></h1>
 	
 	<h5>Create Expense</h5>
 				<form action="/expenses" method="POST">
 					  @csrf
+					  @include ('errors');
 			      
 			          <input placeholder="Description" id="description" type="text" name="description">
 			          <label for="description"></label>
@@ -29,7 +30,7 @@
 			          <label for="expenses_id"></label>
 			        			      
 			          <button  type="submit" name="action">Submit
-			          	<i>send</i>
+			          	
 			          </button>
 			         
 			    </form>

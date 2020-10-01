@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+
 Route::get('/', 'ExpensesController@index');
 Route::get('/expenses/create', 'ExpensesController@create'); 
 Route::get('/expenses/{expense}', 'ExpensesController@show');

@@ -4,12 +4,13 @@
 	<title></title>
 </head>
 <body>
-	<h1><a href="/">HOME</a></h1>
+	<h1><a href="/">EXPENSE</a></h1>
 	
 	<h5>Update Expenses</h5>
 				<form action="/expenses/{{$expense->id}}" method="POST">
 					  @method("PUT")
 					  @csrf
+					  @include ('errors')
 			      
 			          <input placeholder="Description" id="description" type="text" name="description" value='{{$expense->description}}'>
 			          <label for="description"></label>
@@ -30,7 +31,6 @@
 			          <label for="approval_user_id"></label>
 			        			      
 			          <button  type="submit" name="action">Submit
-			          	<i>send</i>
 			          </button>
 			         
 			    </form>
