@@ -28,9 +28,7 @@
 			          <input placeholder="Category ID" id="category_id" type="number" name="expenses_id">
 			          <label for="category_id></label>
 
-			          < button type="submit" name="action">Submit
-			          	<i>send</i>
-			          </button>
+			          < button type="submit">Submit</button>
 
 			    </form>
 </body>

@@ -24,21 +24,23 @@ class BudgetItemsController extends Controller
     }
 
     public function store()
-    {
-    	// Create new event
-    	$budget_item = new BudgetItem;
-    	$budget_item->id = request()->id;
-    	$budget_item->year = request()->year;
-    	$budget_item->amount = request()->amount;
-    	$budget_item->total_expenses = request()->total_expenses;
-    	$budget_item->department_id = request()->department_id;
-		$budget_item->category_id = request()->category_id;
-    	$budget_item->save();
+   {
+        $validated_fields = request() ->validate([
+        
+        
+        'id' => 'required',
+        'year' => 'required',
+        'amount' => 'required',
+        'total_expenses' => 'required',
+        'department_id'=> 'required',
+        'category_id' => 'required',
+        
 
-
-    	// Redirect
-    	return redirect('/');
+    ]);
+        $budget_item =budget_item::create($validated_fields);
+                return redirect('/');
     }
+
 
     public function edit(budgetItem $budget_item)
     {
@@ -47,19 +49,23 @@ class BudgetItemsController extends Controller
 
     public function update(budgetItem $budget_item)
     {
+        $validated_fields = request() ->validate([
+        
+        
+        'id' => 'required',
+        'year' => 'required',
+        'amount' => 'required',
+        'total_expenses' => 'required',
+        'department_id'=> 'required',
+        'category_id' => 'required',
+        
 
-    	$budget_item = new ExpenseItem;
-    	$budget_item->id = request()->id;
-    	$budget_item->year = request()->year;
-    	$budget_item->amount = request()->amount;
-    	$budget_item->total_expenses = request()->total_expenses;
-    	$budget_item->department_id = request()->department_id;
-		$budget_item->category_id = request()->category_id;
-    	$budget_item->save();
-
-
-    	return redirect('/budget-items/'.$budget_item->id);
-    }	
+    ]);
+        
+        $budget_item = budget_item::put($validated_fields);
+        return redirect('/budget-items/'.$budget_item->id);
+        
+    }   
 
     public function destroy(budgetItem $budget_item)
     {
