@@ -66,17 +66,17 @@
     <body>
         <div class="flex-center position-ref full-height">
             <div class="top-right links">    
-                <a href="{{ url('/login') }}">Login</a>
+                <a href="{{ url('/logout') }}">Logout</a>
              </div>
 
             <div class="content">
                 <div class="title m-b-md">
-                    Expense Report
+                    Welcome {{ auth()->user()->first_name }}
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
+                    <a href="/users">Users</a>
+                    <a href="/departments">Departments</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>

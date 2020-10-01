@@ -8,7 +8,7 @@
 
 </head>
 <body>
-	<h1>HOME</h1>
+	<h1>DEPARTMENTS</h1>
 
 	<h3><a href="/departments/create">Create Department</a></h3> <br> <br>
 

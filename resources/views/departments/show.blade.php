@@ -5,7 +5,7 @@
 </head>
 <body>
 
-	<h1><a href="/departments">HOME</a></h1>
+	<h1><a href="/departments">DEPARTMENTS</a></h1>
 	
 	<h3><a href="/departments/{{ $departments->id }}/edit">Edit Department</a></h3>
 	
