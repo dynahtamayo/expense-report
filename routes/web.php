@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 //users table
-Route::get('/', 'UsersController@index');
+Route::get('/users', 'UsersController@index');
 //GET - display the Create users form
 Route::get('/users/create', 'UsersController@create');
 Route::get('/users/{users}', 'UsersController@show');

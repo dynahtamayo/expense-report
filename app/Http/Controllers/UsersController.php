@@ -31,7 +31,7 @@ class UsersController extends Controller
         $users->department_id = request()->department_id;
         $users->save();
     	//redirect
-       	return redirect('/');
+       	return redirect('/users');
     }
 
     public function edit(User $users){
@@ -47,11 +47,11 @@ class UsersController extends Controller
         $users->password = request()->password;
         $users->department_id = request()->department_id;
         $users->save();
-    	return redirect('/');
+    	return redirect('/users');
     }
 
     public function destroy(User $users){
     	$users->delete();
-    	return redirect('/');
+    	return redirect('/users');
     }
 }

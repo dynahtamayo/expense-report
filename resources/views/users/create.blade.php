@@ -4,7 +4,7 @@
 	<title></title>
 </head>
 <body>
-	<h1><a href="/">HOME</a></h1>
+	<h1><a href="/users">HOME</a></h1>
 	
 	<h3>Create User</h3>
 	
