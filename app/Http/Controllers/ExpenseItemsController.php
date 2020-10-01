@@ -31,7 +31,7 @@ class ExpenseItemsController extends Controller
             'description' => 'required',
             'date' => 'required',
             'amount' => 'required',
-            'approved_amount' => 'required|unique:expense_items',
+            'approved_amount' => 'required',
             'submit_user_id' => 'required|unique:expense_items',
             'expenses_id' => 'required|unique:expense_items',
             'expenses_category_id' => 'required|unique:expense_items',
@@ -57,7 +57,7 @@ class ExpenseItemsController extends Controller
 
 
     	// Redirect
-    	return redirect('/');
+    	return redirect('/expense-items');
     }
 
     public function edit(ExpenseItem $expense_item)
@@ -98,7 +98,7 @@ class ExpenseItemsController extends Controller
     public function destroy(ExpenseItem $expense_item)
     {
     	$expense_item->delete();
-    	return redirect('/');
+    	return redirect('/expense-items');
     }
 
 }

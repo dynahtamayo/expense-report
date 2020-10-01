@@ -34,19 +34,19 @@
     <div class="nav-wrapper container">
 
       <ul class='grey darken-3'>
-        <li><a href="" class="grey-text text-lighten-4"><i class="material-icons left">person</i>Users</a></li>
+        <li><a href="/users" class="grey-text text-lighten-4"><i class="material-icons left">person</i>Users</a></li>
         
-        <li><a href="" class="grey-text text-lighten-4"><i class="material-icons left">attach_money</i>Expenses</a></li>
+        <li><a href="/expenses" class="grey-text text-lighten-4"><i class="material-icons left">attach_money</i>Expenses</a></li>
         
-        <li><a href="/" class="grey-text text-lighten-4"><i class="material-icons left">local_atm</i>Expense Items</a></li>
+        <li><a href="/expense-items" class="grey-text text-lighten-4"><i class="material-icons left">local_atm</i>Expense Items</a></li>
         
-        <li><a href="" class="grey-text text-lighten-4"><i class="material-icons left">category</i>Categories</a></li>
+        <li><a href="/categories" class="grey-text text-lighten-4"><i class="material-icons left">category</i>Categories</a></li>
         
-        <li><a href="" class="grey-text text-lighten-4"><i class="material-icons left">star</i>Assets</a></li>
+        <li><a href="assets" class="grey-text text-lighten-4"><i class="material-icons left">star</i>Assets</a></li>
         
-        <li><a href="" class="grey-text text-lighten-4"><i class="material-icons left">apartment</i>Departments</a></li>
+        <li><a href="departments" class="grey-text text-lighten-4"><i class="material-icons left">apartment</i>Departments</a></li>
         
-        <li><a href="" class="grey-text text-lighten-4"><i class="material-icons left">monetization_on</i>Budget Items</a></li>
+        <li><a href="budget-items" class="grey-text text-lighten-4"><i class="material-icons left">monetization_on</i>Budget Items</a></li>
 
 
       </ul>

@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'ExpenseItemsController@index');
+Route::get('/expense-items', 'ExpenseItemsController@index');
 
 
 Route::get('/expense-items/create', 'ExpenseItemsController@create'); // FIRST
