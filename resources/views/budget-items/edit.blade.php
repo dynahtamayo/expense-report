@@ -29,9 +29,7 @@
 			          <input placeholder="Category ID" id="category_id" type="number" name="category_id" value='{{ $budget-items->category_id }}'>
 			          <label for="category_id"></label>
 
-			           <button  type="submit" name="action">Submit
-			          	<i>send</i>
-			          </button>
+			           <button  type="submit">Submit</button>
 			    </form>
 </body>
 </html> 
