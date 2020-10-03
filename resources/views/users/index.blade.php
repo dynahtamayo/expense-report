@@ -8,7 +8,7 @@
 
 </head>
 <body>
-	<h1>HOME</h1>
+	<h1>USERS</h1>
 
 	<h3><a href="/users/create">Create User</a> </h3>
 		<table border="1">
@@ -19,7 +19,6 @@
 					<th>Last Name</th>
 					<th>Phone</th>
 					<th>Email</th>
-					<th>Password</th>
 					<th>Department ID</th>
 				</tr>
 			</thead>
@@ -48,11 +47,6 @@
 					<td>
 						@foreach($users as $user)							
 							{{ $user->email }} <br>					
-						@endforeach
-					</td>
-					<td>
-						@foreach($users as $user)							
-							{{ $user->password }} <br>					
 						@endforeach
 					</td>
 					<td>

@@ -4,11 +4,12 @@
 	<title></title>
 </head>
 <body>
-	<h1><a href="/departments">HOME</a></h1>
+	<h1><a href="/departments">DEPARTMENTS</a></h1>
 	
 	<h3>Update Department</h3>
 		<form action="/departments/{{ $departments->id }}" method="POST">
 			@method("PUT")
+			@include('layouts.errors')
 			@csrf
 			      
 			<input placeholder="Name" id="name" type="string" name="name" value='{{ $departments->name }}'>

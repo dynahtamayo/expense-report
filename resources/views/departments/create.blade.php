@@ -4,12 +4,12 @@
 	<title></title>
 </head>
 <body>
-	<h1><a href="/departments">HOME</a></h1>
+	<h1><a href="/departments">DEPARTMENTS</a></h1>
 	
 	<h3>Create Department</h3>
 	
 	<form action="/departments" method="POST">
-		
+		@include('layouts.errors')
 		@csrf
 			      
 		<input placeholder="Name" id="name" type="string" name="name">

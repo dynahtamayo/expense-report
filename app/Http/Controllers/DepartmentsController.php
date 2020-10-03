@@ -21,12 +21,13 @@ class DepartmentsController extends Controller
     }
 
     public function store(){
-    	//Create new
-    	$departments = new Department;
-    	$departments->name = request()->name;
-    	$departments->parent_department_id = request()->parent_department_id;
-        $departments->save();
-    	//redirect
+
+        $validated_fields = request()->validate([
+            'name' => 'required',
+            'parent_department_id' => 'required'
+        ]);
+
+        $users = Department::create($validated_fields);
        	return redirect('/departments');
     }
 
@@ -36,10 +37,14 @@ class DepartmentsController extends Controller
 
     public function update(Department $departments){
 
-    	$departments->name = request()->name;
+    	$validated_fields = request()->validate([
+            'name' => 'required',
+            'parent_department_id' => 'required'
+        ]);
+
+        $departments->name = request()->name;
     	$departments->parent_department_id = request()->parent_department_id;
         $departments->save();
-
     	return redirect('/departments');
     }
 
