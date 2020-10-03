@@ -9,7 +9,7 @@
 
 </head>
 <body>
-	<h1>HOME</h1>
+	<h1>CATEGORY</h1>
 
 	<a href="/category/create">Create Category</a> <br> <br>
 
@@ -25,8 +25,7 @@
 				<tr>
 					<td>
 						@foreach($Categories as $Categories)
-							<a href="/category/{{ $Categories -> id }}">{{ $Categories->id }}</a><br>		
-						@endforeach
+							<a href="/category/{{ $Categories ->id }}">{{ $Categories->id }}</a><br>		@endforeach
 					</td>
 					<td>
 						@foreach($Categories as $Category)							

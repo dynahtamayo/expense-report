@@ -4,7 +4,7 @@
 	<title></title>
 </head>
 <body>
-	<h1><a href="/">HOME</a></h1>
+	<h1><a href="/">CATEGORY</a></h1>
 	
 	<h5>Update Category</h5>
 				<form action="/category/{{ $Categories->id }}" method="POST">

@@ -42,12 +42,12 @@ Route::delete('/budget-items/{budget_item}', 'BudgetItemsController@destroy'); /
 
 //categories table
 Route::get('/', 'CategoryController@index');
-Route::get('/category/create', 'CategoryController@create'); // FIRST 
+Route::get('/category/create', 'CategoryController@create');  
 Route::get('/category/{Categories}', 'CategoryController@show');
-Route::post('/category', 'CategoryController@store'); // SECOND
-Route::get('/category/{Categories}/edit', 'CategoryController@edit'); //THIRD
-Route::put('/category/{Categories}', 'CategoryController@update'); // FOURTH
-Route::delete('/category/{Categories}', 'CategoryController@destroy'); // FIFT
+Route::post('/category', 'CategoryController@store'); 
+Route::get('/category/{Categories}/edit', 'CategoryController@edit');  
+Route::put('/category/{Categories}', 'CategoryController@update'); 
+Route::delete('/category/{Categories}', 'CategoryController@destroy'); 
 
 //assets table
 Route::get('/', 'AssetsController@index');
