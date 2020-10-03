@@ -31,6 +31,7 @@ Route::get('/departments/{departments}/edit', 'DepartmentsController@edit');
 Route::put('/departments/{departments}', 'DepartmentsController@update');
 Route::delete('/departments/{departments}', 'DepartmentsController@destroy');
 
+//budget items table
 Route::get('/', 'BudgetItemsController@index');
 Route::get('/budget-items/create', 'BudgetItemsController@create'); // FIRST
 Route::get('/budget-items/{budget_item}', 'BudgetItemsController@show');
@@ -39,6 +40,7 @@ Route::get('/budget-items/{budget_item}/edit', 'BudgetItemsController@edit'); //
 Route::put('/budget-items/{budget_item}', 'BudgetItemsController@update'); // FOURTH
 Route::delete('/budget-items/{budget_item}', 'BudgetItemsController@destroy'); // FIFTH
 
+//categories table
 Route::get('/', 'CategoryController@index');
 Route::get('/category/create', 'CategoryController@create'); // FIRST 
 Route::get('/category/{Categories}', 'CategoryController@show');
@@ -46,3 +48,13 @@ Route::post('/category', 'CategoryController@store'); // SECOND
 Route::get('/category/{Categories}/edit', 'CategoryController@edit'); //THIRD
 Route::put('/category/{Categories}', 'CategoryController@update'); // FOURTH
 Route::delete('/category/{Categories}', 'CategoryController@destroy'); // FIFT
+
+//assets table
+Route::get('/', 'AssetsController@index');
+Route::get('/assets/create', 'AssetsController@create'); 
+Route::get('/assets/{asset}', 'AssetsController@show');
+Route::post('/assets','AssetsController@store'); 
+Route::get('/assets/{asset}/edit','AssetsController@edit'); 
+Route::put('/assets/{asset}','AssetsController@update'); 
+Route::delete('/assets/{asset}','AssetsController@destroy'); 
+
