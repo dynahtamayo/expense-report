@@ -71,7 +71,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                     Expense Report
+                    Expense Report
                 </div>
 
                 <div class="links">
