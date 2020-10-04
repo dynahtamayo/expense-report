@@ -5,7 +5,7 @@
 </head>
 <body>
 
-	<h1><a href="/">EXPENSE</a></h1>
+	<h1><a href="/expenses">EXPENSE</a></h1>
 	<a href="/expenses/{{$expense->id}}/edit">Edit Expense</a>
 	
 	<h4>ID={{$expense->id }}</h2>

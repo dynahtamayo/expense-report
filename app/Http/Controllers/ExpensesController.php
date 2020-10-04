@@ -50,7 +50,7 @@ class ExpensesController extends Controller
 
 	    	$expense = Expense::create($validated_fields); 
 
-	    	return redirect('/');
+	    	return redirect('/expenses');
 	    }
 
 	    public function edit(Expense $expense)
@@ -85,7 +85,7 @@ class ExpensesController extends Controller
 	    public function destroy(Expense $expense)
 	    {
 	    	$expense->delete();
-	    	return redirect('/');
+	    	return redirect('/expenses');
 	    }
 
 	    

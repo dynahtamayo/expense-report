@@ -5,7 +5,7 @@
 </head>
 <body>
 
-	<h1><a href="/">HOME</a></h1>
+	<h1><a href="/budget-items">HOME</a></h1>
 
 	<a href="/budget-items/{{ $budget-item->id }}/edit">Edit Budget Item</a>
 

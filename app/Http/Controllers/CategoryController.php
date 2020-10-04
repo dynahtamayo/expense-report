@@ -34,7 +34,7 @@ class CategoryController extends Controller
             $Categories = Category::create($validated_fields); 
 
         	// Redirect
-        	return redirect('/');
+        	return redirect('/category');
         }
 
         public function edit(Category $Categories)
@@ -57,7 +57,7 @@ class CategoryController extends Controller
         public function destroy(Category $Categories)
         {
         	$Categories->delete();
-        	return redirect('/');
+        	return redirect('/category');
         }
 
     }

@@ -4,7 +4,7 @@
 	<title></title>
 </head>
 <body>
-	<h1><a href="/">HOME</a></h1>
+	<h1><a href="/budget-items">HOME</a></h1>
 
 	<h5>Update Expense Item</h5>
 				<form action="/budget-items/{{ $budget_item->id }}" method="POST">

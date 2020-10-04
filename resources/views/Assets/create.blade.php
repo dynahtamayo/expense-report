@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h1><a href="/">HOME</a></h1>
-	<h1><a href="/">ASSET</a></h1>
+	<h1><a href="/assets">ASSET</a></h1>
 
 	<h5>Create Asset</h5>
 				<form action="/assets" method="POST">

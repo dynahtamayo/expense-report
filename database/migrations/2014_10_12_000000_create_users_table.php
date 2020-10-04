@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('phone');
             $table->string('password');
-            $table->integer('department_id');
+            $table->unsignedInteger('department_id');
             $table->timestamps();
         });
     }

@@ -19,8 +19,8 @@ class CreateExpensesTable extends Migration
             $table->date('date_submitted');
             $table->date('date_status');
             $table->string('status');
-            $table->integer('submit_user_id');
-            $table->string('approval_user_id');
+            $table->unsignedInteger('submit_user_id');
+            $table->unsignedInteger('approval_user_id');
             $table->timestamps();
         });
     }

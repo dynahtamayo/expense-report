@@ -32,7 +32,7 @@ Route::put('/departments/{departments}', 'DepartmentsController@update');
 Route::delete('/departments/{departments}', 'DepartmentsController@destroy');
 
 //budget items table
-Route::get('/', 'BudgetItemsController@index');
+Route::get('/budget-items', 'BudgetItemsController@index');
 Route::get('/budget-items/create', 'BudgetItemsController@create'); // FIRST
 Route::get('/budget-items/{budget_item}', 'BudgetItemsController@show');
 Route::post('/budget-items', 'BudgetItemsController@store'); // SECOND
@@ -41,7 +41,7 @@ Route::put('/budget-items/{budget_item}', 'BudgetItemsController@update'); // FO
 Route::delete('/budget-items/{budget_item}', 'BudgetItemsController@destroy'); // FIFTH
 
 //categories table
-Route::get('/', 'CategoryController@index');
+Route::get('/category', 'CategoryController@index');
 Route::get('/category/create', 'CategoryController@create');  
 Route::get('/category/{Categories}', 'CategoryController@show');
 Route::post('/category', 'CategoryController@store'); 
@@ -50,7 +50,7 @@ Route::put('/category/{Categories}', 'CategoryController@update');
 Route::delete('/category/{Categories}', 'CategoryController@destroy'); 
 
 //assets table
-Route::get('/', 'AssetsController@index');
+Route::get('/assets', 'AssetsController@index');
 Route::get('/assets/create', 'AssetsController@create'); 
 Route::get('/assets/{asset}', 'AssetsController@show');
 Route::post('/assets','AssetsController@store'); 
@@ -78,7 +78,7 @@ Route::delete('/expense-items/{expense_item}', 'ExpenseItemsController@destroy')
 // DELETE /events/{event} = delete a record FIFTH
 
 //expenses table
-Route::get('/', 'ExpensesController@index');
+Route::get('/expenses', 'ExpensesController@index');
 Route::get('/expenses/create', 'ExpensesController@create'); 
 Route::get('/expenses/{expense}', 'ExpensesController@show');
 Route::post('/expenses','ExpensesController@store'); 

@@ -5,7 +5,7 @@
 </head>
 <body>
 
-	<h1><a href="/">CATEGORY</a></h1>
+	<h1><a href="/category">CATEGORY</a></h1>
 	<a href="/category/{{ $Categories->id }}/edit">Edit Category</a>
 	
 	<h4>ID =  {{ $Categories->id }}</h2>

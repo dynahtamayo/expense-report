@@ -6,7 +6,7 @@
 <body>
 
 	<h1><a href="/">HOME</a></h1>
-	<h1><a href="/">ASSET</a></h1>
+	<h1><a href="/assets">ASSET</a></h1>
 	<a href="/assets/{{$asset->id}}/edit">Edit Asset</a>
 
 	<h4>ID={{$asset->id }}</h2>

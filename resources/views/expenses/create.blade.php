@@ -4,7 +4,7 @@
 	<title></title>
 </head>
 <body>
-	<h1><a href="/">EXPENSE</a></h1>
+	<h1><a href="/expenses">EXPENSE</a></h1>
 	
 	<h5>Create Expense</h5>
 				<form action="/expenses" method="POST">

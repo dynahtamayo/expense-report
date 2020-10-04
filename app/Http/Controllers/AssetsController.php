@@ -35,7 +35,7 @@ class AssetsController extends Controller
 
 	    	$asset = Asset::create($validated_fields);
 
-	    	return redirect('/');
+	    	return redirect('/assets');
 	    }
 
 	    public function edit(Asset $asset)
@@ -59,6 +59,6 @@ class AssetsController extends Controller
 	    public function destroy(Asset $asset)
 	    {
 	    	$asset->delete();
-	    	return redirect('/');
+	    	return redirect('/assets');
 	    }
 }

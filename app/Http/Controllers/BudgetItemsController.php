@@ -38,7 +38,7 @@ class BudgetItemsController extends Controller
 
     ]);
     	$budget_item =budget_item::create($validated_fields);
-            	return redirect('/');
+            	return redirect('/budget-items');
     }
 
     public function edit(BudgetItems $budget_item)
@@ -69,7 +69,7 @@ class BudgetItemsController extends Controller
     public function destroy(budgetItems $budget_item)
     {
     	$budget_item->delete();
-    	return redirect('/');
+    	return redirect('/budget-items');
     }
 
 }
