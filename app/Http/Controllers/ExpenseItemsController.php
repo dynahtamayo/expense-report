@@ -37,8 +37,6 @@ class ExpenseItemsController extends Controller
             'expenses_category_id' => 'required|unique:expense_items',
             'asset_id' => 'required|unique:expense_items'
 
-            //'email' => 'required|unique:users',
-
         ]);
 
         $expense_item = ExpenseItem::create($validated_fields);
@@ -80,18 +78,15 @@ class ExpenseItemsController extends Controller
 
         ]);
 
-    $expense_item = ExpenseItem::find($expense_item->id);
-    $expense_item->save();
-    	
-    	// $expense_item->description = request()->description;
-    	// $expense_item->date = request()->date;
-    	// $expense_item->amount = request()->amount;
-    	// $expense_item->approved_amount = request()->approved_amount;
-    	// $expense_item->submit_user_id = request()->submit_user_id;
-    	// $expense_item->expenses_id = request()->expenses_id;
-    	// $expense_item->expenses_category_id = request()->expenses_category_id;
-    	// $expense_item->asset_id = request()->asset_id;
-    	// $expense_item->save();
+    	$expense_item->description = request()->description;
+    	$expense_item->date = request()->date;
+    	$expense_item->amount = request()->amount;
+    	$expense_item->approved_amount = request()->approved_amount;
+    	$expense_item->submit_user_id = request()->submit_user_id;
+    	$expense_item->expenses_id = request()->expenses_id;
+    	$expense_item->expenses_category_id = request()->expenses_category_id;
+    	$expense_item->asset_id = request()->asset_id;
+    	$expense_item->save();
     	
     	return redirect('/expense-items/'.$expense_item->id);
     }	
