@@ -42,9 +42,7 @@ class DepartmentsController extends Controller
             'parent_department_id' => 'required'
         ]);
 
-        $departments->name = request()->name;
-    	$departments->parent_department_id = request()->parent_department_id;
-        $departments->save();
+        $departments->update($validated_fields);
     	return redirect('/departments');
     }
 

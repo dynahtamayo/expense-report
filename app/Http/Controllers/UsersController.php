@@ -50,14 +50,7 @@ class UsersController extends Controller
             'department_id' => 'required',
         ]);
         $validated_fields['password'] = bcrypt($validated_fields['password']);
-
-    	$users->first_name = request()->first_name;
-    	$users->last_name = request()->last_name;
-    	$users->email = request()->email;
-    	$users->phone = request()->phone;
-        $users->password = request()->password;
-        $users->department_id = request()->department_id;
-        $users->save();
+        $users->update($validated_fields);
     	return redirect('/users');
     }
 
