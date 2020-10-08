@@ -78,7 +78,8 @@ class ExpensesController extends Controller
 	    		'approval_user_id' => 'required'
 	    	]);
 
-	    	$expense = Expense::create($validated_fields); 
+	    	//$expense = Expense::create($validated_fields); 
+	    	$expense->update($validated_fields); 
 	    	return redirect('/expenses/'.$expense->id);
 	    }	
 
