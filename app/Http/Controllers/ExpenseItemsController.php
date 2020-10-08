@@ -68,7 +68,7 @@ class ExpenseItemsController extends Controller
     public function update(ExpenseItem $expense_item)
     {
 
-        $validated_fields = request()->validate([
+        request()->validate([
             'description' => 'required',
             'date' => 'required',
             'amount' => 'required',
@@ -80,7 +80,8 @@ class ExpenseItemsController extends Controller
 
         ]);
 
-    $expense_item = ExpenseItem::create($validated_fields);
+    $expense_item = ExpenseItem::find($expense_item->id);
+    $expense_item->save();
     	
     	// $expense_item->description = request()->description;
     	// $expense_item->date = request()->date;
