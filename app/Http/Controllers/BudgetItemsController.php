@@ -61,7 +61,8 @@ class BudgetItemsController extends Controller
 
     ]);
         
-        $budget_item = budget_item::put($validated_fields);
+        $budget_item = budget_item::create($validated_fields);
+        $budget_item->update($validated_fields);
         return redirect('/budget-items/'.$budget_item->id);
         
     }	
