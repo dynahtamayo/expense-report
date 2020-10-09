@@ -50,7 +50,8 @@ class CategoryController extends Controller
                     'money' => 'required'
                 ]);
 
-            $Categories = Category::put($validated_fields);
+            $Categories->update($validated_fields);
+            
         	return redirect('/category/'.$Categories->id);
         }	
 
