@@ -5,6 +5,7 @@
 use App\User;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
+use App\ExpenseItem;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,4 +26,17 @@ $factory->define(User::class, function (Faker $faker) {
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'remember_token' => Str::random(10),
     ];
+});
+
+$factory->define(ExpenseItem::class, function (Faker $faker) {
+	return [
+		'description' => $faker->text,
+		'date' => $faker->date,
+		'amount' => $faker->numberBetween($min = 1000, $max = 10000),
+		'approved_amount' => $faker->numberBetween($min = 1000, $max = 10000),
+		'submit_user_id' => $faker->numberBetween($min = 1000, $max = 10000),
+		'expenses_id' => $faker->numberBetween($min = 1000, $max = 10000),
+		'expenses_category_id' => $faker->numberBetween($min = 1000, $max = 10000),
+		'asset_id' => $faker->numberBetween($min = 1000, $max = 10000),
+	];
 });
