@@ -1,7 +1,7 @@
 <?php
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-
+use App\BudgetItem;
 use App\User;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
@@ -16,13 +16,23 @@ use Illuminate\Support\Str;
 | model instances for testing / seeding your application's database.
 |
 */
-
 $factory->define(User::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
-        'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+        'email_verified_at' =>now(),
+        'password' =>'1234', //password
         'remember_token' => Str::random(10),
+        
+    ];
+});
+$factory->define(BudgetItem::class, function (Faker $faker) {
+    return [
+        'id' => $faker->numberBetween($min = 1000, $max = 9000),
+        'year' => $faker->date,
+        'amount' => $faker->numberBetween($min = 1000, $max = 9000),
+        'total_expenses' =>$faker->numberBetween($min = 1000, $max = 9000),
+        'department_id' => $faker->numberBetween($min = 1000, $max = 9000),
+        'category_id' => $faker->numberBetween($min = 1000, $max = 9000),
     ];
 });
