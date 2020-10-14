@@ -12,5 +12,13 @@ class AssetSeeder extends Seeder
     public function run()
     {
         //
+        $asset = [
+        	[ 'description' => 'abc'],
+        	[ 'description' => 'def'],
+        	[ 'description' => 'ghi'],
+        	[ 'description' => 'jkl'],
+        	[ 'description' => 'mno'],
+        ];
+        DB::Table('asset')->insert($asset);
     }
 }
