@@ -24,7 +24,6 @@ $factory->define(Expense::class, function (Faker $faker) {
 		'date_status' => $faker->date,
 		'status' => $faker->text,
 		'submit_user_id' => $faker->numberBetween($min = 1000, $max = 10000),
-		'expenses_id' => $faker->numberBetween($min = 1000, $max = 10000),
 		'approval_user_id' => $faker->numberBetween($min = 1000, $max = 10000),
     ];
 });
