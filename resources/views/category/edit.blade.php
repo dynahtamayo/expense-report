@@ -6,9 +6,10 @@
 <body>
 	<h1><a href="/category">CATEGORY</a></h1>
 	
-	<h5>Update Category</h5>
+			<h5>Update Category</h5>
 				<form action="/category/{{ $Categories->id }}" method="POST">
 					@method("PUT")
+					@include('layouts.errors')
 					@csrf
 			       
 			          <input placeholder="Name" id="name" type="Name" name="name" value='{{ $Categories->name }}'>

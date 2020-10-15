@@ -6,6 +6,7 @@ use App\BudgetItem;
 use App\Expense;
 use App\User;
 use App\Department;
+use App\Category;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
 
@@ -48,4 +49,11 @@ $factory->define(Expense::class, function (Faker $faker) {
 		'submit_user_id' => $faker->numberBetween($min = 1000, $max = 10000),
 		'approval_user_id' => $faker->numberBetween($min = 1000, $max = 10000),
     ];
+});
+
+$factory->define(Category::class, function (Faker $faker) {
+	return [
+		'name' => $faker->name,
+		'money' => $faker->numberBetween($min = 1, $max = 10000),
+	];
 });

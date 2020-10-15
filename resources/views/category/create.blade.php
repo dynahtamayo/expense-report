@@ -6,10 +6,11 @@
 <body>
 	<h1><a href="/category">CATEGORY</a></h1>
 	
-	<h5>Create Category</h5>
+			<h5>Create Category</h5>
 				<form action="/category" method="POST">
+					@include('layouts.errors')
 					@csrf
-			       
+
 			          <input placeholder="Name" id="name" type="name" name="name">
 			          <label for="name"></label>
 
