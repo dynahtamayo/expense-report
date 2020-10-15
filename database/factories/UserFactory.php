@@ -9,6 +9,7 @@ use App\Department;
 use App\Category;
 use Faker\Generator as Faker;
 use Illuminate\Support\Str;
+use App\ExpenseItem;
 
 $factory->define(User::class, function (Faker $faker, $department_id) {
     return [
@@ -21,7 +22,6 @@ $factory->define(User::class, function (Faker $faker, $department_id) {
         'department_id' => $department_id,
     ];
 });
-
 
 $factory->define(Department::class, function (Faker $faker) {
     return [
@@ -55,5 +55,18 @@ $factory->define(Category::class, function (Faker $faker) {
 	return [
 		'name' => $faker->name,
 		'money' => $faker->numberBetween($min = 1, $max = 10000),
+	];
+});
+
+$factory->define(ExpenseItem::class, function (Faker $faker) {
+	return [
+		'description' => $faker->text,
+		'date' => $faker->date,
+		'amount' => $faker->numberBetween($min = 1000, $max = 10000),
+		'approved_amount' => $faker->numberBetween($min = 1000, $max = 10000),
+		'submit_user_id' => $faker->numberBetween($min = 1000, $max = 10000),
+		'expenses_id' => $faker->numberBetween($min = 1000, $max = 10000),
+		'expenses_category_id' => $faker->numberBetween($min = 1000, $max = 10000),
+		'asset_id' => $faker->numberBetween($min = 1000, $max = 10000),
 	];
 });

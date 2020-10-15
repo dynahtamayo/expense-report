@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
         $this->call(AssetSeeder::class);
         $this->call(ExpensesSeeder::class);
         $this->call(CategorySeeder::class);
+        $this->call(ExpenseItemSeeder::class);
     }
 }
