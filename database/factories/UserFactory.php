@@ -1,7 +1,7 @@
 <?php
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
-
+use App\BudgetItem;
 use App\User;
 use App\Department;
 use Faker\Generator as Faker;
@@ -34,6 +34,18 @@ $factory->define(User::class, function (Faker $faker, $department_id) {
 $factory->define(Department::class, function (Faker $faker) {
     return [
         'name' => $faker->word,
-        'parent_department_id' => $faker->randomDigit
+        'parent_department_id' => $faker->randomDigit    
+    ];
+});
+
+$factory->define(BudgetItem::class, function (Faker $faker) {
+    return [
+        'id' => $faker->numberBetween($min = 1000, $max = 9000),
+        'year' => $faker->date,
+        'amount' => $faker->numberBetween($min = 1000, $max = 9000),
+        'total_expenses' =>$faker->numberBetween($min = 1000, $max = 9000),
+        'department_id' => $faker->numberBetween($min = 1000, $max = 9000),
+        'category_id' => $faker->numberBetween($min = 1000, $max = 9000),
+
     ];
 });
