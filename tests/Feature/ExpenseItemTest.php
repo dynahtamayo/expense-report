@@ -9,6 +9,7 @@ use App\ExpenseItem;
 
 class ExpenseItemTest extends TestCase
 {
+    use RefreshDatabase;
 
     /** @test */
     public function a_user_can_see_all_the_expense_items()
@@ -55,20 +56,26 @@ class ExpenseItemTest extends TestCase
     }
 
     //NEED TO EDIT THIS LAST ONE ----------------------------------------------------------------
-    /** @test */
+    // /** @test */
     // public function a_user_can_update_an_expense_item()
     // {
+    //     $this->withoutExceptionHandling();
+    //     $expense_item = factory(ExpenseItem::class)->create();
+    //     $form_fields = [
+    //         'description' => 'New',
+    //         'date' => '2015-01-01',
+    //         'amount' => '5',
+    //         'approved_amount' => '3',
+    //         'submit_user_id' => '101',
+    //         'expenses_id' => '202',
+    //         'expenses_category_id' => '303',
+    //         'asset_id' => '404'
+    //     ];
 
-    //     $form_fields = factory(ExpenseItem::class)->create();
-
-    //     $response = $this->put('/expense-items/'.$form_fields->id, $form_fields->toArray());
-
-    //     $this->assertDatabaseHas('expense_items', $form_fields, $form_fields->toArray());
-
-    //     $response->assertRedirect('/expense-items/'.$form_fields->id);
+    //     $this->post(route('expense-items.edit', $expense_item->id), $form_fields)->assertOk(route('expense-items.index'));
+    //     $this.assertDatabaseHas('expense_items', $form_fields);
 
     // }
-
 
     /** @test */
     public function a_user_can_delete_an_expense_item()

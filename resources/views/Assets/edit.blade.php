@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<h1><a href="/">HOME</a></h1>
-	<h1><a href="/assets">ASSET</a></h1>
+@extends('layouts.master')
+
+@section('content')
+
+	<div class="row">
+			<div class="col s12">
+				<div class="container">
 
 	<h5>Update Assets</h5>
 				<form action="/assets/{{$asset->id}}" method="POST">
@@ -13,15 +12,25 @@
 					  @include ('layouts.errors')
 					  @csrf
 
-
+					  <div class="row">
+			        		<div class="input-field col s6">
 			          <input placeholder="Description" id="description" type="text" name="description" value='{{$asset->description}}'>
 			          <input placeholder="Description" id="description" type="text" name="description" value='{{$asset->description}}' required>
 			          <label for="description"></label>
+			      </div>
+			  </div>
 
-			          <button  type="submit" name="action">Submit
-			          	<i>send</i>
-			          </button>
+			          <div class="center">
+							<button  class="btn waves-effect waves-light green"type="submit" name="action">Submit
+							<i class="material-icons right">send</i>
+							</button>
+						</div>	
 
 			    </form>
-</body>
-</html> 
+				</div>
+		</div>
+
+	
+	</div>
+
+@endsection

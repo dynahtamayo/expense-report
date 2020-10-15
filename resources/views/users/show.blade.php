@@ -1,13 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+@extends('layouts.master')
 
-	<h1><a href="/users">USERS</a></h1>
+@section('content')
+
+<div class="container">
 	
-	<h3><a href="/users/{{ $users->id }}/edit">Edit User</a></h3>
+	<a href="/expense-items/{{ $expense_item->id }}/edit" class="btn waves-effect waves-light green">Edit User<i class="material-icons right">edit</i></a><br><br>
+
+	<form action="/users/{{ $users->id }}" method="POST">
+
+		@csrf
+		@method('DELETE')
+		<button  class="btn waves-effect waves-light red"type="submit" name="action">DELETE
+				<i class="material-icons right">delete</i>
+			</button>
+
+	</form>
 	
 	<h4>ID =  {{ $users->id }}</h4>
 	<h4>First Name =  {{ $users->first_name }} </h4>
@@ -16,13 +23,7 @@
 	<h4>Email =  {{ $users->email }}</h4>
 	<h4>Department ID =  {{ $users->department_id }}</h4>
 	
-	<form action="/users/{{ $users->id }}" method="POST">
+	
 
-		@csrf
-		@method('DELETE')
-		<button class="btn" type="submit">Delete</button>
-
-	</form>
-
-</body>
-</html>
+</div>
+@endsection

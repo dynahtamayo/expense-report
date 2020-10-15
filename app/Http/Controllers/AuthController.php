@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Auth;
 use Illuminate\Http\Request;
+use App\User;
 
 
 class AuthController extends Controller
@@ -46,6 +47,8 @@ class AuthController extends Controller
             'password' => 'required',
             'department_id' => 'required',
         ]);
+        $validated_fields['password'] = bcrypt($validated_fields['password']);
+        $user = User::create($validated_fields);
         return redirect('/login');
     }
 }

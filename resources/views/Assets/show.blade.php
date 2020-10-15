@@ -1,23 +1,24 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+@extends('layouts.master')
 
-	<h1><a href="/">HOME</a></h1>
-	<h1><a href="/assets">ASSET</a></h1>
-	<a href="/assets/{{$asset->id}}/edit">Edit Asset</a>
+@section('content')
+
+<div class="container">
+	
+	<a href="/expense-items/{{ $expense_item->id }}/edit" class="btn waves-effect waves-light green">Edit Asset<i class="material-icons right">edit</i></a><br><br>
+
+	<form action="/assets/{{$asset->id}}" method="POST">
+		@csrf
+		@method('DELETE')
+		<button  class="btn waves-effect waves-light red"type="submit" name="action">DELETE
+				<i class="material-icons right">delete</i>
+			</button>
+
+	</form>
+
 
 	<h4>ID={{$asset->id }}</h2>
 	<h4>Description={{$asset->description}}</h2>
 		
-	<form action="/assets/{{$asset->id}}" method="POST">
-		@csrf
-		@method('DELETE')
-		<button class="btn" type="submit">Delete</button>
-
-	</form>
-
+	
 </body>
 </html> 

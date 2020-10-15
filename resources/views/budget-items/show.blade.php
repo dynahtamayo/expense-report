@@ -1,13 +1,20 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+@extends('layouts.master')
 
-	<h1><a href="/budget-items">HOME</a></h1>
+@section('content')
 
-	<a href="/budget-items/{{ $budget-item->id }}/edit">Edit Budget Item</a>
+<div class="container">
+
+	<a href="/expense-items/{{ $expense_item->id }}/edit" class="btn waves-effect waves-light green">Edit Budget Item<i class="material-icons right">edit</i></a><br><br>
+	
+	<form action="/budget-items/{{ $budget_item->id }}" method="POST">
+
+		@csrf
+		@method('DELETE')
+		<button  class="btn waves-effect waves-light red"type="submit" name="action">DELETE
+				<i class="material-icons right">delete</i>
+			</button>
+
+	</form>
 
 	<h4>ID =  {{ $budget-item->id }}</h2>
 	<h4>Year =  {{ $budget-item->year }} </h1>
@@ -17,13 +24,7 @@
 	<h4>Category ID =  {{ $budget-item->category_id }}</h2>
 	
 
-	<form action="/budget-items/{{ $budget_item->id }}" method="POST">
+	
 
-		@csrf
-		@method('DELETE')
-		<button class="btn" type="submit">Delete</button>
-
-	</form>
-
-</body>
-</html> 
+</div>
+@endsection

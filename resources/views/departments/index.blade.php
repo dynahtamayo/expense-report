@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
+@extends('layouts.master')
 
-	<style>
-</style>
+@section('content')
 
-</head>
-<body>
-	<h1>DEPARTMENTS</h1>
+<div class="container">
 
-	<h3><a href="/departments/create">Create Department</a></h3> <br> <br>
+	<h1>Departments</h1>
+	<a href="/expense-items/create" class="btn waves-effect waves-light green">Create Department<i class="material-icons right">create</i></a> <br> <br>
 
-		<table border="1">
+		<table class="striped">
 			<thead>
 				<tr>
 					<th>ID</th>
@@ -42,5 +37,6 @@
 			</tbody>
 		</table>
 
-</body>
-</html>
+</div>
+
+@endsection

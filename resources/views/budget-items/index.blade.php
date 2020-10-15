@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
+@extends('layouts.master')
 
-	<style>
-</style>
+@section('content')
 
-</head>
-<body>
-	<h1>HOME</h1>
+<div class="container">
+	<h1>Budget Items</h1>
 
-	<a href="/budget-items/create">Create Budget Items</a> <br> <br>
+	<a href="/expense-items/create" class="btn waves-effect waves-light green">Create Budget Item<i class="material-icons right">create</i></a> <br> <br>
 
-		<table border="1">
+		<table class="striped">
 
 				<tr>
 					<th>ID</th>
@@ -58,5 +53,6 @@
 
 		</table>
 
-</body>
-</html> 
+</div>
+
+@endsection

@@ -1,35 +1,59 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<h1><a href="/budget-items">HOME</a></h1>
+@extends('layouts.master')
 
-	<h5>Create Budget Items</h5>
+@section('content')
+
+<div class="container">
+
+	<div class="row">
+			<div class="col s12">
+				<h5>Create Budget Items</h5>
 				<form action="/budget-items" method="POST">
+					@include('layouts.errors')
 					@csrf
 
-			          <input placeholder="Description" id="id" type="number" name="id">
-			          <label for="id"></label>
+					<div class="row">
+		        		<div class="input-field col s6">
+				          <input placeholder="Description" id="id" type="text" name="id">
+				          <label for="id"></label>
+			      		</div>
 
-			          <input placeholder="Year" id="date" type="date" name="year">
-			          <label for="year"></label>
+			      		<div class="input-field col s6">
+				          <input placeholder="Year" id="date" type="date" name="year">
+				          <label for="year"></label>
+				      	</div>
+				  	</div>
 
-			          <input placeholder="Amount" id="amount" type="number" step="0.01" name="amount">
-			          <label for="amount"></label>
+				  	<div class="row">
+		        		<div class="input-field col s6">
+				          <input placeholder="Amount" id="amount" type="number" step="0.01" name="amount">
+				          <label for="amount"></label>
+			      		</div>
+			      		<div class="input-field col s6">
+				          <input placeholder="Total Expenses" id="total_expenses" type="number" step="0.01" name="total_expenses">
+				          <label for="total_expenses"></label>
+					     </div>
+					 </div>
 
-			          <input placeholder="Total Expenses" id="total_expenses" type="number" step="0.01" name="total_expenses">
-			          <label for="total_expenses"></label>
+					<div class="row">
+						<div class="input-field col s6">
+				          <input placeholder="Department ID" id="department_id" type="number" name="department_id">
+				          <label for="department_id"></label>
+				      </div>
+				      <div class="input-field col s6">
+				          <input placeholder="Category ID" id="category_id" type="number" name="expenses_id">
+				          <label for="category_id"></label>
+				      </div>
+			      	</div>
 
-			          <input placeholder="Department ID" id="department_id" type="number" name="department_id">
-			          <label for="department_id"></label>
-
-			          <input placeholder="Category ID" id="category_id" type="number" name="expenses_id">
-			          <label for="category_id></label>
-
-			          < button type="submit">Submit</button>
+			          <div class="center">
+							<button  class="btn waves-effect waves-light green"type="submit" name="action">Submit
+							<i class="material-icons right">send</i>
+							</button>
+						</div>
 
 			    </form>
-</body>
-</html> 
+		</div>
+	</div>
+</div>
+
+@endsection
