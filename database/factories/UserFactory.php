@@ -31,9 +31,9 @@ $factory->define(User::class, function (Faker $faker, $department_id) {
 });
 
 
-$factory->define(Department::class, function (Faker $faker, $department_id) {
+$factory->define(Department::class, function (Faker $faker) {
     return [
         'name' => $faker->word,
-        'parent_department_id' => $department_id
+        'parent_department_id' => $faker->randomDigit
     ];
 });

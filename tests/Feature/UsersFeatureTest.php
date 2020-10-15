@@ -21,25 +21,20 @@ class UsersFeatureTest extends TestCase
     /** @test */
     public function show_one_user(){
         $users = factory(User::class)->create();
-
         $response = $this->get('/users/' . $users->id);
-
         $response->assertStatus(200);
     }
 
     /** @test */
     public function create_user(){
         $response = $this->get('/users/create');
-
         $response->assertStatus(200);
     }
 
     /** @test */
     public function store_user(){
         $users = factory(User::class)->raw();
-
         $response = $this->post('/users', $users);
-
         $this->assertDatabaseHas('users', $users);
         $response->assertRedirect('/users');
     }
@@ -47,9 +42,7 @@ class UsersFeatureTest extends TestCase
      /** @test */
     public function edit_users(){
         $users = factory(User::class)->create();
-
         $response = $this->get('/users' . $users->id . '/edit');
-
         $response->assertStatus(200);
     }
 
@@ -59,9 +52,7 @@ class UsersFeatureTest extends TestCase
         $users_updated_values = factory(User::class)->raw([
             'users_id' => $users->id
         ]);
-
-        $response = $this->put('/users/' . $users->id, $users_updated_values);
-
+        $response = $this->p('/users/' . $users->id, $users_updated_values);
         $this->assertDatabaseMissing('users', [
             "first_name" => $users->first_name,
             "last_name" => $users->last_name,
@@ -70,7 +61,6 @@ class UsersFeatureTest extends TestCase
             "password" => $staff->password,
             "department_id" => $users->department_id
         ]);
-
         $this->assertDatabaseHas('users', $users_updated_values);
         $response->assertRedirect('/users');
     }
@@ -78,9 +68,7 @@ class UsersFeatureTest extends TestCase
     /** @test */
     public function delete_user(){
         $users = factory(User::class)->create();
-
         $response = $this->delete('/users/' . $users->id);
-
         $this->assertDeleted('users', ["id" => $users->id]);
         $response->assertRedirect('/users');
     }
