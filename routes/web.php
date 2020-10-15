@@ -12,6 +12,8 @@ Route::middleware(['auth'])->group(function(){
 	Route::get('/dashboard', 'DashboardController@index');
 	Route::get('/logout', 'AuthController@logout');
 });
+Route::get('/register', 'AuthController@register');
+Route::post('/register', 'AuthController@store');
 
 //users table
 Route::get('/users', 'UsersController@index');

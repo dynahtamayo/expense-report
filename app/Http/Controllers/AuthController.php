@@ -33,4 +33,19 @@ class AuthController extends Controller
 		return redirect ('/login');
 	}
 
+    public function register(){
+        return view('register');
+    }
+
+    public function store(){
+        $validated_fields = request()->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|unique:users',
+            'phone' => 'required',
+            'password' => 'required',
+            'department_id' => 'required',
+        ]);
+        return redirect('/login');
+    }
 }
