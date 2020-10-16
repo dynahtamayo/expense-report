@@ -19,7 +19,7 @@
 			
 				<tr>
 					<td>
-						@foreach($Categories as $Category)
+						@foreach($Categories as $Categories)
 							<a href="/category/{{ $Categories ->id }}">{{ $Categories->id }}</a><br>		@endforeach
 					</td>
 					<td>
