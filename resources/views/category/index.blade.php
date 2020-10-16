@@ -9,17 +9,18 @@
 	<a href="/category/create" class="btn waves-effect waves-light green">Create Category<i class="material-icons right">create</i></a> <br> <br>
 
 		<table class="striped">
-			
+			<thead>
 				<tr>
 					<th>ID</th>
 					<th>Name</th>
 					<th>Money</th>
 				</tr>
-			
-			
+			</thead>
+			<tbody>
+				@foreach($Categories as $Category)
 				<tr>
 					<td>
-						@foreach($Categories as $Category)
+						
 							<a href="/category/{{ $Categories ->id }}">{{ $Categories->id }}</a><br>
 					</td>
 					<td>						
@@ -27,11 +28,11 @@
 					</td>
 					<td>						
 							{{ $Categories->money }} <br>					
-						@endforeach
+						
 					</td>
 
-				</tr>
-			
+				</tr>@endforeach
+			</tbody>	
 		</table>
 
 	</div>
