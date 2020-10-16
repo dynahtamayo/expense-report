@@ -19,6 +19,6 @@ class AssetSeeder extends Seeder
         	[ 'description' => 'jkl'],
         	[ 'description' => 'mno'],
         ];
-        DB::Table('asset')->insert($asset);
+        DB::Table('assets')->insert($asset);
     }
 }
