@@ -7,7 +7,7 @@
 				<div class="container">
 
 	<h5>Update Assets</h5>
-				<form action="/assets/{{$asset->id}}" method="POST">
+				<form action="/assets/{{ $assets->id }}" method="POST">
 					  @method("PUT")
 					  @include ('layouts.errors')
 					  @csrf
