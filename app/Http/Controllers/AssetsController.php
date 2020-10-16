@@ -15,7 +15,7 @@ class AssetsController extends Controller
 	    	return view('assets.index',compact('assets'));
 	    }
 
-	    public function show(Asset $asset)
+	    public function show(Asset $assets)
 	    {
 	    	return view('assets.show',compact('assets'));
 	    }
@@ -38,7 +38,7 @@ class AssetsController extends Controller
 	    	return redirect('/assets');
 	    }
 
-	    public function edit(Asset $asset)
+	    public function edit(Asset $assets)
 	    {
 	    	return view('assets.edit', compact('assets'));
 	    }
@@ -56,7 +56,7 @@ class AssetsController extends Controller
 	    	return redirect('/assets/'.$asset->id);
 	    }	
 
-	    public function destroy(Asset $asset)
+	    public function destroy(Asset $assets)
 	    {
 	    	$asset->delete();
 	    	return redirect('/assets');
