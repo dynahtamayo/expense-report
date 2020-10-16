@@ -10,7 +10,7 @@
 	<h5>Create Expense</h5>
 				<form action="/expenses" method="POST">
 					  @csrf
-					  @include ('errors');
+					  @include ('layouts.errors');
 			      
 			      	<div class="row">
 			        		<div class="input-field col s6">
