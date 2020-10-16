@@ -16,9 +16,9 @@
 	</form>
 
 
-	<h4>ID={{$assets->id }}</h2>
-	<h4>Description={{$assets->description}}</h2>
+	<h4>ID={{ $assets->id }}</h2>
+	<h4>Description={{ $assets->description }}</h2>
 		
 	
 </body>
-</html> 
+@endsection
