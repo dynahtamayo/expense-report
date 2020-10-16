@@ -19,16 +19,13 @@
 			
 				<tr>
 					<td>
-						@foreach($Categories as $Categories)
-							<a href="/category/{{ $Categories ->id }}">{{ $Categories->id }}</a><br>		@endforeach
+						@foreach($Categories as $Category)
+							<a href="/category/{{ $Categories ->id }}">{{ $Categories->id }}</a><br>
 					</td>
-					<td>
-						@foreach($Categories as $Category)							
+					<td>						
 							{{ $Categories->name }} <br>			
-						@endforeach
 					</td>
-					<td>
-						@foreach($Categories as $Category)							
+					<td>						
 							{{ $Categories->money }} <br>					
 						@endforeach
 					</td>
