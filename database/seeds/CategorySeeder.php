@@ -14,11 +14,11 @@ class CategorySeeder extends Seeder
     public function run()
     {
         $category = [
-            ['name' => 'Advertising', 'money' => 50,000.00],
-            ['name' => 'Contract', 'money' => 50,000.00],
-            ['name' => 'Transportation', 'money' => 50,000.00],
-            ['name' => 'Business Uniforms', 'money' => 50,000.00],
-            ['name' => 'Bank Fees', 'money' => 50,000.00]
+            ['name' => 'Advertising', 'money' => 50000.00],
+            ['name' => 'Contract', 'money' => 50000.00],
+            ['name' => 'Transportation', 'money' => 50000.00],
+            ['name' => 'Business Uniforms', 'money' => 50000.00],
+            ['name' => 'Bank Fees', 'money' => 50000.00]
         ];
         DB::table('category')->insert($category);
     }
