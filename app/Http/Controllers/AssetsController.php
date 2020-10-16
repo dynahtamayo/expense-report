@@ -17,7 +17,7 @@ class AssetsController extends Controller
 
 	    public function show(Asset $asset)
 	    {
-	    	return view('assets.show',compact('asset'));
+	    	return view('assets.show',compact('assets'));
 	    }
 
 	    public function create()

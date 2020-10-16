@@ -10,7 +10,7 @@ class BudgetItemsController extends Controller
     public function index()
     {
     	$budget_items = BudgetItem::all();
-    	return view('Budget-items.index', compact('budget_items'));
+    	return view('budget-items.index', compact('budget_items'));
     }
 
     public function show(BudgetItem $budget_item)
