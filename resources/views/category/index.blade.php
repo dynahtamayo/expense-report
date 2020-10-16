@@ -6,7 +6,7 @@
 
 	<h1>Categories</h1>
 
-	<a href="/expense-items/create" class="btn waves-effect waves-light green">Create Category<i class="material-icons right">create</i></a> <br> <br>
+	<a href="/category/create" class="btn waves-effect waves-light green">Create Category<i class="material-icons right">create</i></a> <br> <br>
 
 		<table class="striped">
 			

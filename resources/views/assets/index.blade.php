@@ -4,7 +4,7 @@
 
 <div class="container">
 	<h1>Assets</h1>
-	<a href="/expense-items/create" class="btn waves-effect waves-light green">Create Asset<i class="material-icons right">create</i></a> <br> <br>
+	<a href="/assets/create" class="btn waves-effect waves-light green">Create Asset<i class="material-icons right">create</i></a> <br> <br>
 
 		<table class="striped">
 

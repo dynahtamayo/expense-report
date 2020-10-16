@@ -4,7 +4,7 @@
 
 <div class="container">
 
-	<a href="/expense-items/{{ $expense_item->id }}/edit" class="btn waves-effect waves-light green">Edit Department<i class="material-icons right">edit</i></a><br><br>
+	<a href="/departments/{{ $departments->id }}/edit" class="btn waves-effect waves-light green">Edit Department<i class="material-icons right">edit</i></a><br><br>
 
 	<form action="/departments/{{ $departments->id }}" method="POST">
 

@@ -6,7 +6,7 @@
 
 	<div class="row">
 			<div class="col s12">
-	<h5>Update Expense Item</h5>
+	<h5>Update Budget Items</h5>
 				<form action="/budget-items/{{ $budget_item->id }}" method="POST">
 					@method("PUT")
 					@include('layouts.errors')
