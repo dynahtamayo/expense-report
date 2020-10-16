@@ -13,10 +13,13 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        $Category = Category::create ([
-			'name' => 'Advertising',
-			'money' => '50,000.00',
-			]);
-        	//DB::table('category')->insert($category);
+        $category = [
+            [ 'name' => 'Advertising', 'money' => '50,000.00'],
+            [ 'name' => 'Contract', 'money' => '50,000.00'],
+            [ 'name' => 'Transportation', 'money' => '50,000.00'],
+            [ 'name' => 'Business Uniforms', 'money' => '50,000.00'],
+            [ 'name' => 'Bank Fees', 'money' => '50,000.00'],
+        ];
+        DB::table('category')->insert($category);
     }
 }
