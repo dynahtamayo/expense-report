@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Database\Seeder;
 
 class BudgetItemsSeeder extends Seeder
@@ -18,6 +19,6 @@ class BudgetItemsSeeder extends Seeder
         	[ 'id' => '4', 'year' => '2020', 'amount' => '8901', 'total_expenses' => '8901', 'department_id' => '345678', 'category_id' => '01'],
         	[ 'id' => '5', 'year' => '2020', 'amount' => '2314', 'total_expenses' => '2314', 'department_id' => '456789', 'category_id' => '01'],	
         ];
-        DB::Table('budgetItems')->insert($budgetItem);
+        DB::table('budgetItems')->insert($budgetItem);
     }
 }
