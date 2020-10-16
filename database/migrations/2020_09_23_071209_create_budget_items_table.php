@@ -15,7 +15,7 @@ class CreateBudgetItemsTable extends Migration
     {
         Schema::create('budget_items', function (Blueprint $table) {
             $table->id();
-            $table->date('year');
+            $table->year('year');
             $table->decimal('amount');
             $table->decimal('total_expenses', 10, 2);
             $table->unsignedInteger('department_id');
