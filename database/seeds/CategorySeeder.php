@@ -15,7 +15,7 @@ class CategorySeeder extends Seeder
     {
         $Category = Category::create ([
 			'name' => 'Advertising',
-			'money' => '50,000',
+			'money' => '50,000.00',
 			]);
         	//DB::table('category')->insert($category);
     }
