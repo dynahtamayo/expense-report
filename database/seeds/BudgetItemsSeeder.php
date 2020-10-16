@@ -19,6 +19,6 @@ class BudgetItemsSeeder extends Seeder
         	[  'year' => '2020', 'amount' => '8901', 'total_expenses' => '8901', 'department_id' => '345678', 'category_id' => '01'],
         	[ 'year' => '2020', 'amount' => '2314', 'total_expenses' => '2314', 'department_id' => '456789', 'category_id' => '01'],	
         ];
-        DB::table('budgetItems')->insert($budgetItem);
+        DB::table('budget_items')->insert($budgetItem);
     }
 }
