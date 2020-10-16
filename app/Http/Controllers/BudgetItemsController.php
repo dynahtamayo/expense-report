@@ -61,13 +61,13 @@ class BudgetItemsController extends Controller
 
     ]);
         
-        $budget_item = budget_item::create($validated_fields);
+        $budget_item = BudgetItem::create($validated_fields);
         $budget_item->update($validated_fields);
         return redirect('/budget-items/'.$budget_item->id);
         
     }	
 
-    public function destroy(budgetItems $budget_item)
+    public function destroy(BudgetItem $budget_item)
     {
     	$budget_item->delete();
     	return redirect('/budget-items');
