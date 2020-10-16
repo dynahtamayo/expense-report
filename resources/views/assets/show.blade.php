@@ -6,7 +6,7 @@
 	
 	<a href="/assets/{{ $assets->id }}/edit" class="btn waves-effect waves-light green">Edit Asset<i class="material-icons right">edit</i></a><br><br>
 
-	<form action="/assets/{{$asset->id}}" method="POST">
+	<form action="/assets/{{$assets->id}}" method="POST">
 		@csrf
 		@method('DELETE')
 		<button  class="btn waves-effect waves-light red"type="submit" name="action">DELETE

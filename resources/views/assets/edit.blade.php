@@ -14,8 +14,8 @@
 
 					  <div class="row">
 			        		<div class="input-field col s6">
-			          <input placeholder="Description" id="description" type="text" name="description" value='{{$asset->description}}'>
-			          <input placeholder="Description" id="description" type="text" name="description" value='{{$asset->description}}' required>
+			          <input placeholder="Description" id="description" type="text" name="description" value='{{$assets->description}}'>
+			          <input placeholder="Description" id="description" type="text" name="description" value='{{$assets->description}}' required>
 			          <label for="description"></label>
 			      </div>
 			  </div>
