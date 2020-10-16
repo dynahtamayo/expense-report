@@ -17,7 +17,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				@foreach($Categories as $Category)
+				@foreach($Categories as $Categories)
 				<tr>
 					<td>
 						
