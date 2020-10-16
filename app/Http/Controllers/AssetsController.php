@@ -51,9 +51,9 @@ class AssetsController extends Controller
 
 	    	$validated_fields = request()->validate(['description' => 'required']);
 
-	    	$asset = Asset::create($validated_fields);
+	    	$asset = update($validated_fields);
 
-	    	return redirect('/assets/'.$asset->id);
+	    	return redirect('/assets/');
 	    }	
 
 	    public function destroy(Asset $assets)
