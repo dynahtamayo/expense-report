@@ -29,13 +29,13 @@ class ExpenseItemsController extends Controller
     	// Create new event
         $validated_fields = request()->validate([
             'description' => 'required',
-            'date' => 'required',
-            'amount' => 'required',
-            'approved_amount' => 'required',
-            'submit_user_id' => 'required|unique:expense_items',
-            'expenses_id' => 'required|unique:expense_items',
-            'expenses_category_id' => 'required|unique:expense_items',
-            'asset_id' => 'required|unique:expense_items'
+            // 'date' => 'required',
+            // 'amount' => 'required',
+            // 'approved_amount' => 'required',
+            // 'submit_user_id' => 'required|unique:expense_items',
+            // 'expenses_id' => 'required|unique:expense_items',
+            // 'expenses_category_id' => 'required|unique:expense_items',
+            // 'asset_id' => 'required|unique:expense_items'
 
         ]);
 
@@ -54,19 +54,19 @@ class ExpenseItemsController extends Controller
 
         $validated_fields = request()->validate([
             'description' => 'required',
-            'date' => 'required',
-            'amount' => 'required',
-            'approved_amount' => 'required',
-            'submit_user_id' => 'required',
-            'expenses_id' => 'required',
-            'expenses_category_id' => 'required',
-            'asset_id' => 'required'           
+            // 'date' => 'required',
+            // 'amount' => 'required',
+            // 'approved_amount' => 'required',
+            // 'submit_user_id' => 'required',
+            // 'expenses_id' => 'required',
+            // 'expenses_category_id' => 'required',
+            // 'asset_id' => 'required'           
 
         ]);
 
         $expense_item->update($validated_fields);
     	
-    	return redirect('/expense-items/'.$expense_item->id);
+    	return redirect('/expense-items/');
     }	
 
     public function destroy(ExpenseItem $expense_item)

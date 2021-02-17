@@ -61,12 +61,12 @@ $factory->define(Category::class, function (Faker $faker) {
 $factory->define(ExpenseItem::class, function (Faker $faker) {
 	return [
 		'description' => $faker->text,
-		'date' => $faker->date,
-		'amount' => $faker->numberBetween($min = 1000, $max = 10000),
-		'approved_amount' => $faker->numberBetween($min = 1000, $max = 10000),
-		'submit_user_id' => $faker->numberBetween($min = 1000, $max = 10000),
-		'expenses_id' => $faker->numberBetween($min = 1000, $max = 10000),
-		'expenses_category_id' => $faker->numberBetween($min = 1000, $max = 10000),
-		'asset_id' => $faker->numberBetween($min = 1000, $max = 10000),
+		// 'date' => $faker->date,
+		// 'amount' => $faker->numberBetween($min = 1000, $max = 10000),
+		// 'approved_amount' => $faker->numberBetween($min = 1000, $max = 10000),
+		// 'submit_user_id' => $faker->numberBetween($min = 1000, $max = 10000),
+		// 'expenses_id' => $faker->numberBetween($min = 1000, $max = 10000),
+		// 'expenses_category_id' => $faker->numberBetween($min = 1000, $max = 10000),
+		// 'asset_id' => $faker->numberBetween($min = 1000, $max = 10000),
 	];
 });

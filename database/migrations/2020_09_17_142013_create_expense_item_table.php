@@ -16,13 +16,13 @@ class CreateExpenseItemTable extends Migration
         Schema::create('expense_items', function (Blueprint $table) {
             $table->id();
             $table->string('description');
-            $table->date('date');
-            $table->decimal('amount', 10, 2);
-            $table->decimal('approved_amount', 10, 2);
-            $table->unsignedInteger('submit_user_id')->unique();
-            $table->unsignedInteger('expenses_id')->unique();
-            $table->unsignedInteger('expenses_category_id')->unique();
-            $table->unsignedInteger('asset_id')->unique();
+            // $table->date('date');
+            // $table->decimal('amount', 10, 2);
+            // $table->decimal('approved_amount', 10, 2);
+            // $table->unsignedInteger('submit_user_id')->unique();
+            // $table->unsignedInteger('expenses_id')->unique();
+            // $table->unsignedInteger('expenses_category_id')->unique();
+            // $table->unsignedInteger('asset_id')->unique();
             $table->timestamps();
         });
     }

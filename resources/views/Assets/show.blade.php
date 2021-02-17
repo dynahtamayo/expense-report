@@ -20,5 +20,5 @@
 	<h4>Description={{$asset->description}}</h2>
 		
 	
-</body>
-</html> 
+</div>
+@endsection

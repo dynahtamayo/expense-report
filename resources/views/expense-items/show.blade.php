@@ -1,10 +1,19 @@
-@extends('layouts.master')
-
-@section('content')
-
-<div class="container">
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bluedit</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="icon" href="logo.png">
+	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+	<header>
+		<div class="container mid">
 	
-	<a href="/expense-items/{{ $expense_item->id }}/edit" class="btn waves-effect waves-light green">Edit Expense Item<i class="material-icons right">edit</i></a><br><br>
+	<a href="/expense-items/{{ $expense_item->id }}/edit" class="btn waves-effect waves-light green">Edit<i class="material-icons right">edit</i></a><br><br>
 	<form action="/expense-items/{{ $expense_item->id }}" method="POST">
 
 		@csrf
@@ -16,16 +25,18 @@
 		
 
 	</form>
-	
+
+	<h3>Information:</h3>
+		<br>
 	<h4>ID =  {{ $expense_item->id }}</h4>
 	<h4>Description =  {{ $expense_item->description }} </h4>
-	<h4>Date =  {{ $expense_item->date }}</h4>
-	<h4>Amount =  {{ $expense_item->amount }}</h4>
-	<h4>Approved Amount = {{ $expense_item->approved_amount }}</h4>
-	<h4>Submit User ID =  {{ $expense_item->submit_user_id }}</h4>
-	<h4>Expenses ID = {{ $expense_item->expenses_id }}</h4>
-	<h4>Expenses Category ID = {{ $expense_item->expenses_category_id }}</h4>
-	<h4>Asset ID = {{ $expense_item->asset_id }}</h4>
 	
 </div>
-@endsection
+
+	</header>
+
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="/js/materialize.js"></script>
+  <script src="/js/init.js"></script>
+</body>
+</html>

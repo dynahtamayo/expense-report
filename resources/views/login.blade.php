@@ -3,6 +3,11 @@
 @section('content')
 
 	<div class="container" style="width: 25%">
+		<div class="row">
+    <div class="center-align">
+        <img src="website_logo.png" class="responsive-img" alt="Responsive Image"> 
+    </div>
+</div>
 		<h1 class="center">Login</h1>
 		<form action="/login" method="POST">
 			@include('layouts.errors')

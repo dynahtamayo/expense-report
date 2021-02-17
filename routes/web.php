@@ -1,9 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'ExpenseItemsController@index');
 
 Route::get('/login', 'AuthController@index')->name('login');
 Route::post('/login', 'AuthController@login');
